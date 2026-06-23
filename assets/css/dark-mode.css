@@ -1,0 +1,178 @@
+/*
+ * Julian's Raw Paws - Dark Mode Styles
+ * Overrides for body.dark-theme
+ */
+
+body.dark-theme {
+    --bg-body: #121613; /* Very dark forest green-gray */
+    --bg-card: #1B221E; /* Dark slate card */
+    --text-primary: #F0F6F2;
+    --text-secondary: #A5B5A9;
+    --border-color: #2D3A31;
+}
+
+body.dark-theme .sticky-header {
+    background-color: rgba(18, 22, 19, 0.95);
+    border-bottom-color: var(--border-color);
+}
+
+body.dark-theme .sticky-header .nav-link-custom {
+    color: var(--text-primary);
+}
+
+body.dark-theme .sticky-header .nav-link-custom:hover,
+body.dark-theme .sticky-header .nav-link-custom.active {
+    color: var(--color-primary);
+}
+
+body.dark-theme .hero-home-1 {
+    background: radial-gradient(circle at 80% 20%, #1D2420 0%, var(--bg-body) 60%);
+}
+
+body.dark-theme .btn-custom-outline {
+    border-color: #F0F6F2;
+    color: #F0F6F2;
+}
+
+body.dark-theme .btn-custom-outline:hover {
+    background-color: #F0F6F2;
+    color: #121613;
+}
+
+body.dark-theme .card-custom {
+    background-color: var(--bg-card);
+    border-color: var(--border-color);
+}
+
+body.dark-theme .card-custom:hover {
+    border-color: rgba(230, 95, 44, 0.5);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-theme .table-responsive-custom {
+    background-color: var(--bg-card);
+    border-color: var(--border-color);
+}
+
+body.dark-theme .table-custom th {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-bottom-color: var(--border-color);
+}
+
+body.dark-theme .table-custom td {
+    border-bottom-color: var(--border-color);
+}
+
+/* Auth Cards */
+body.dark-theme .auth-card {
+    background-color: var(--bg-card);
+    border-color: var(--border-color);
+}
+
+body.dark-theme .form-control {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+body.dark-theme .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: var(--color-primary);
+    color: var(--text-primary);
+}
+
+body.dark-theme .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+body.dark-theme .header-toggle-btn {
+    border-color: var(--text-secondary);
+    color: var(--text-secondary);
+}
+
+body.dark-theme .header-toggle-btn:hover {
+    background-color: var(--text-secondary);
+    color: var(--bg-body);
+}
+
+/* Accordions for FAQs */
+body.dark-theme .accordion-item {
+    background-color: var(--bg-card);
+    border-color: var(--border-color);
+}
+
+body.dark-theme .accordion-button {
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+}
+
+body.dark-theme .accordion-button:not(.collapsed) {
+    background-color: rgba(230, 95, 44, 0.1);
+    color: var(--color-primary);
+}
+
+body.dark-theme .accordion-button::after {
+    filter: invert(1);
+}
+
+/* Modals */
+body.dark-theme .modal-content {
+    background-color: var(--bg-card);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+body.dark-theme .modal-header {
+    border-bottom-color: var(--border-color);
+}
+body.dark-theme .modal-footer {
+    border-top-color: var(--border-color);
+}
+body.dark-theme .btn-close {
+    filter: invert(1);
+}
+
+/* Sidebar navigation dashboard overrides */
+body.dark-theme .dashboard-sidebar {
+    background-color: #0E1210; /* Darker than body */
+}
+
+body.dark-theme .dashboard-main {
+    background-color: var(--bg-body);
+}
+
+body.dark-theme .metric-card {
+    background-color: var(--bg-card);
+    border-color: var(--border-color);
+}
+
+body.dark-theme .metric-info span {
+    color: var(--text-primary);
+}
+
+/* Global utility overrides for dark mode contrast */
+body.dark-theme .bg-white {
+    background-color: var(--bg-card) !important;
+}
+
+body.dark-theme .text-muted {
+    color: var(--text-secondary) !important;
+}
+
+body.dark-theme .text-secondary {
+    color: var(--text-secondary) !important;
+}
+
+body.dark-theme h1,
+body.dark-theme .h1,
+body.dark-theme h2,
+body.dark-theme .h2,
+body.dark-theme h3,
+body.dark-theme .h3,
+body.dark-theme h4,
+body.dark-theme .h4,
+body.dark-theme h5,
+body.dark-theme .h5,
+body.dark-theme h6,
+body.dark-theme .h6 {
+    color: var(--text-primary) !important;
+}

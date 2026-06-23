@@ -1,1 +1,423 @@
-Pet_Food_Subscription_Raw_Diet_Delivery
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Julian Thorne | Custom Raw Pet Food Subscriptions</title>
+    <meta name="description" content="Get custom-crafted, biologically appropriate raw food diets prepared by pet nutrition expert Dr. Julian Thorne. Weekly deliveries to keep your pets thriving.">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Custom Style sheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+    <!-- Sticky Header Navigation -->
+    <header class="sticky-header">
+        <div class="container-fluid px-lg-5 d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo-link">
+                <!-- SVG Paw + Logo text -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" width="180" height="50" style="vertical-align: middle;">
+                    <path d="M25,12 C28,12 30,15 28,18 C26,21 24,21 22,18 C20,15 22,12 25,12 Z M37,18 C40,18 42,21 40,24 C38,27 36,27 34,24 C32,21 34,18 37,18 Z M13,18 C16,18 18,21 16,24 C14,27 12,27 10,24 C8,21 10,18 13,18 Z M25,24 C30,24 35,28 35,33 C35,39 30,42 25,42 C20,42 15,39 15,33 C15,28 20,24 25,24 Z" fill="#E65F2C" />
+                    <text x="52" y="32" font-family="'Outfit', sans-serif" font-weight="600" font-size="20" fill="#2A4B35">RawPaws</text>
+                </svg>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="d-none d-xl-flex align-items-center gap-4">
+                <a href="index.html" class="nav-link-custom active">Home 1</a>
+                <a href="home-2.html" class="nav-link-custom">Home 2</a>
+                <a href="about.html" class="nav-link-custom">About</a>
+                <a href="services.html" class="nav-link-custom">Services</a>
+                <a href="pricing.html" class="nav-link-custom">Pricing</a>
+                <a href="gallery.html" class="nav-link-custom">Gallery</a>
+                <a href="booking.html" class="nav-link-custom">Book Now</a>
+                <a href="blog.html" class="nav-link-custom">Blog</a>
+                <a href="contact.html" class="nav-link-custom">Contact</a>
+                <a href="dashboard.html" class="nav-link-custom">Dashboard</a>
+            </nav>
+
+            <!-- Toggles and CTA Actions -->
+            <div class="d-flex align-items-center gap-2">
+                <button class="header-toggle-btn theme-toggle-btn" aria-label="Toggle theme"><i class="bi bi-moon-stars-fill" aria-hidden="true"></i></button>
+                <button class="header-toggle-btn rtl-toggle-btn" aria-label="Toggle layout direction">RTL</button>
+                
+                <a href="login.html" class="btn-custom btn-custom-outline py-2 px-3 d-none d-sm-inline-flex">Login</a>
+
+                <!-- Mobile Hamburger Menu Button -->
+                <button class="btn border-0 d-xl-none p-1 text-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas" aria-controls="mobileMenuOffcanvas" aria-label="Open navigation menu">
+                    <i class="bi bi-list fs-1"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Offcanvas Screen Menu -->
+    <div class="offcanvas offcanvas-end mobile-nav-fullscreen" tabindex="-1" id="mobileMenuOffcanvas" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header px-4 py-3 border-bottom">
+            <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column align-items-center justify-content-center">
+            <nav class="d-flex flex-column align-items-center gap-3">
+                <a href="index.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Home 1</a>
+                <a href="home-2.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Home 2</a>
+                <a href="about.html" class="nav-link-custom" data-bs-dismiss="offcanvas">About</a>
+                <a href="services.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Services</a>
+                <a href="pricing.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Pricing</a>
+                <a href="gallery.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Gallery</a>
+                <a href="booking.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Book Now</a>
+                <a href="blog.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Blog</a>
+                <a href="contact.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Contact</a>
+                <a href="dashboard.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Dashboard</a>
+            </nav>
+            <div class="d-flex flex-column gap-2 mt-5 w-75 text-center">
+                <a href="login.html" class="btn-custom btn-custom-outline w-100 py-2">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Header Spacer -->
+    <div class="header-spacer"></div>
+
+    <main>
+        <!-- SECTION 1: Hero Section (Modern General Layout) -->
+        <section class="hero-general" style="background-image: url('https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&q=80&w=1200');">
+            <div class="container">
+                <span class="badge bg-secondary-subtle text-secondary px-3 py-2 rounded-pill mb-3">Fresh Biologically Appropriate Diets</span>
+                <h1 class="text-white">Real Food For Real Carnivores.</h1>
+                <p class="lead text-white-50">I prepare customized raw pet food recipes and deliver them weekly to your doorstep. Tailored nutrition programs designed to make your cat or dog shine with health.</p>
+                <div class="d-flex justify-content-center flex-wrap gap-3 mt-4">
+                    <a href="booking.html" class="btn-custom btn-custom-primary">Build Pet Profile</a>
+                    <a href="services.html" class="btn-custom btn-custom-outline border-white text-white">Explore Diets</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Why Raw Diet? (Value Proposition Cards) -->
+        <section class="py-5 bg-white">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="mb-3">The Benefits of Fresh Raw Diets</h2>
+                    <p class="lead max-width-600 mx-auto">Providing pets with species-appropriate raw food mimics their evolutionary eating behaviors, yielding observable health transformations.</p>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-4">
+                        <div class="card-custom">
+                            <div class="card-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&q=80&w=600" alt="Dog showing high energy benefits">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="h4 mb-2">Radiant Energy & Vitality</h3>
+                                <p>Unprocessed, bioavailable proteins mean higher nutrient absorption, boosting daily strength and playfulness.</p>
+                            </div>
+                            <a href="services.html" class="btn-custom btn-custom-outline card-btn">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-custom">
+                            <div class="card-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&q=80&w=600" alt="Cat showing healthy shiny coat benefits">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="h4 mb-2">Lustrous Skin & Coat</h3>
+                                <p>Essential fatty acids from fresh offal and meats resolve flaky skin, reducing hair loss and shedding problems.</p>
+                            </div>
+                            <a href="services.html" class="btn-custom btn-custom-outline card-btn">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-custom">
+                            <div class="card-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1535930891776-0c2dfb7fda1a?auto=format&fit=crop&q=80&w=600" alt="Healthy dog digestion benefits">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="h4 mb-2">Optimal Digestion</h3>
+                                <p>Zero grains, starches, or artificial preservatives prevent stomach bloating and generate smaller, solid stools.</p>
+                            </div>
+                            <a href="services.html" class="btn-custom btn-custom-outline card-btn">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: How It Works (Personalized Plan Architect) -->
+        <section class="py-5">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="mb-3">Three Steps To Healthier Pets</h2>
+                    <p class="lead max-width-600 mx-auto">How I prepare and deliver a customized raw diet subscription tailored specifically to your companion's needs.</p>
+                </div>
+                <div class="row g-4 text-center">
+                    <div class="col-md-4">
+                        <div class="p-4">
+                            <div class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center fs-2 mb-3" style="width:70px; height:70px;">1</div>
+                            <h3 class="h4">Submit Pet Details</h3>
+                            <p>Use the custom profile form to detail your dog or cat's breed, age, weight, activity levels, and present health state.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-4">
+                            <div class="rounded-circle bg-secondary text-white d-inline-flex align-items-center justify-content-center fs-2 mb-3" style="width:70px; height:70px;">2</div>
+                            <h3 class="h4">Individual Recipe Design</h3>
+                            <p>I formulate a custom meal ratio of muscle meat, bone, organ, and dietary supplements fitting your pet's metabolic rate.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-4">
+                            <div class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center fs-2 mb-3" style="width:70px; height:70px;">3</div>
+                            <h3 class="h4">Portioned Home Delivery</h3>
+                            <p>We flash freeze the meals in compostable packs and ship them directly to your door on your preferred weekly schedule.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Fresh Signature Recipes -->
+        <section class="py-5 bg-white">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="mb-3">Signature Raw Blends</h2>
+                    <p class="lead max-width-600 mx-auto">100% human-grade pasture raised proteins, fresh caught fish, and trace minerals. Zero fillers, zero grains.</p>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-4">
+                        <div class="card-custom">
+                            <div class="card-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&q=80&w=600" alt="Premium Beef raw blend recipe">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="h4 mb-2">Ancestral Beef Blend</h3>
+                                <p class="text-primary fw-medium mb-3">$7.50 / Daily Pack</p>
+                                <ul class="list-center-left text-muted small ps-3">
+                                    <li>80% Grass-Fed Beef & Bone</li>
+                                    <li>10% Beef Heart & Liver</li>
+                                    <li>10% Organic Spinach & Berries</li>
+                                </ul>
+                            </div>
+                            <a href="booking.html" class="btn-custom btn-custom-secondary card-btn">Choose Ancestral Beef</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-custom">
+                            <div class="card-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&q=80&w=600" alt="Free-Range Chicken raw blend recipe">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="h4 mb-2">Free-Range Chicken Feast</h3>
+                                <p class="text-primary fw-medium mb-3">$6.80 / Daily Pack</p>
+                                <ul class="list-center-left text-muted small ps-3">
+                                    <li>80% Whole Chicken & Neck Bone</li>
+                                    <li>10% Chicken Gizzards & Heart</li>
+                                    <li>10% Kelp & Wild Salmon Oil</li>
+                                </ul>
+                            </div>
+                            <a href="booking.html" class="btn-custom btn-custom-secondary card-btn">Choose Free-Range Chicken</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-custom">
+                            <div class="card-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1535930891776-0c2dfb7fda1a?auto=format&fit=crop&q=80&w=600" alt="Wild Turkey raw blend recipe">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="h4 mb-2">Wild Turkey & Veggie Blend</h3>
+                                <p class="text-primary fw-medium mb-3">$8.20 / Daily Pack</p>
+                                <ul class="list-center-left text-muted small ps-3">
+                                    <li>75% Premium Turkey Meat</li>
+                                    <li>15% Ground Turkey Bone</li>
+                                    <li>10% Organic Kelp & Pumpkin Puree</li>
+                                </ul>
+                            </div>
+                            <a href="booking.html" class="btn-custom btn-custom-secondary card-btn">Choose Wild Turkey</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Happy Tails (Testimonials) -->
+        <section class="py-5">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="mb-3">Testimonials from Happy Pet Parents</h2>
+                    <p class="lead max-width-600 mx-auto">Real success stories from single pet owners who transitioned their companions under my customized guidance.</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <!-- Simple Carousel testimonial container -->
+                        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="bg-white p-5 border rounded shadow-sm text-center">
+                                        <div class="testimonial-avatar">
+                                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=150&h=150" alt="Clara Mitchell" class="testimonial-author-img">
+                                        </div>
+                                        <p class="fs-5 italic mb-4">"My retriever Max suffered from food allergies for years. Dr. Thorne custom designed a wild turkey raw diet. The allergies cleared within 3 weeks and his energy is back to puppy levels!"</p>
+                                        <h4 class="h5 mb-1">Clara Mitchell & Max</h4>
+                                        <p class="text-muted small">San Francisco, CA</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="bg-white p-5 border rounded shadow-sm text-center">
+                                        <div class="testimonial-avatar">
+                                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150&h=150" alt="Devon Cooper" class="testimonial-author-img">
+                                        </div>
+                                        <p class="fs-5 italic mb-4">"I was skeptical about raw feeding my Persian cat. Julian walked me through the transition step-by-step. Her coat is incredibly soft now, and she cleans her bowl every single time!"</p>
+                                        <h4 class="h5 mb-1">Devon Cooper & Cleo</h4>
+                                        <p class="text-muted small">Austin, TX</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon bg-secondary rounded-circle" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon bg-secondary rounded-circle" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: FAQ Section -->
+        <section class="py-5 bg-white">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="mb-3">Frequently Asked Questions</h2>
+                    <p class="lead max-width-600 mx-auto">Get answers to the most common queries about transitioning to raw foods and managing your weekly deliveries.</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="faqHeadingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+                                        Is a raw diet safe for cats and dogs?
+                                    </button>
+                                </h3>
+                                <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-start">
+                                        Yes. Felines and canines are biologically designed as carnivores. They possess short digestive tracts and highly acidic stomach pH levels capable of safely digesting fresh raw meats, organs, and bones without issues.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="faqHeadingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                                        How are the meals packaged and delivered?
+                                    </button>
+                                </h3>
+                                <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-start">
+                                        Each custom portion is flash frozen and packed in vacuum-sealed compostable materials. They are placed in insulated boxes with dry ice and shipped via standard priority delivery to ensure they arrive frozen at your doorstep.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="faqHeadingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                                        Can I pause or customize my subscription?
+                                    </button>
+                                </h3>
+                                <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-start">
+                                        Absolutely. Through your login dashboard, you can pause shipments, adjust delivery intervals, alter recipe selections, or request adjustments based on your pet's current weight.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <!-- Column 1: Brand Logo + Moto -->
+                <div class="col-lg-3">
+                    <div class="footer-logo mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" width="180" height="50" style="vertical-align: middle;">
+                            <path d="M25,12 C28,12 30,15 28,18 C26,21 24,21 22,18 C20,15 22,12 25,12 Z M37,18 C40,18 42,21 40,24 C38,27 36,27 34,24 C32,21 34,18 37,18 Z M13,18 C16,18 18,21 16,24 C14,27 12,27 10,24 C8,21 10,18 13,18 Z M25,24 C30,24 35,28 35,33 C35,39 30,42 25,42 C20,42 15,39 15,33 C15,28 20,24 25,24 Z" fill="#E65F2C" />
+                            <text x="52" y="32" font-family="'Outfit', sans-serif" font-weight="600" font-size="20" fill="#FFFFFF">RawPaws</text>
+                        </svg>
+                    </div>
+                    <p class="small text-muted">I prepare biologically appropriate raw food diets customized for your pet's unique nutritional demands, delivered fresh to keep tails wagging.</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com" class="social-icon-link" aria-label="Facebook Profile"><i class="bi bi-facebook"></i></a>
+                        <a href="https://instagram.com" class="social-icon-link" aria-label="Instagram Profile"><i class="bi bi-instagram"></i></a>
+                        <a href="https://twitter.com" class="social-icon-link" aria-label="Twitter Profile"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://youtube.com" class="social-icon-link" aria-label="YouTube Channel"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="col-md-3 col-lg-2 offset-lg-1">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="home-2.html">Home 2</a></li>
+                        <li><a href="about.html">About Julian</a></li>
+                        <li><a href="services.html">Services</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Resources -->
+                <div class="col-md-3 col-lg-2">
+                    <h4 class="footer-title">Resources</h4>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="pricing.html">Diet Pricing</a></li>
+                        <li><a href="booking.html">Book Profile</a></li>
+                        <li><a href="gallery.html">Happy Pets Gallery</a></li>
+                        <li><a href="blog.html">Nutritional Blog</a></li>
+                        <li><a href="contact.html">Reach Out</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter Form -->
+                <div class="col-md-6 col-lg-4">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p class="small text-muted">Subscribe for raw transition tips, recipe updates, and discounts on custom trial packs.</p>
+                    <form class="newsletter-form needs-validation" novalidate>
+                        <div class="input-group mb-2">
+                            <input type="email" class="form-control" placeholder="Pet Parent Email" aria-label="Pet Parent Email" required>
+                            <button class="btn btn-custom btn-custom-primary px-3" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright Section -->
+            <div class="border-top border-secondary mt-5 pt-4 d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3">
+                <p class="small text-muted mb-0">&copy; 2026 RawPaws. Designed by Dr. Julian Thorne. All Rights Reserved.</p>
+                <div class="d-flex gap-3">
+                    <a href="404.html" class="small text-muted">Privacy Policy</a>
+                    <a href="404.html" class="small text-muted">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTopBtn" aria-label="Scroll back to top">
+        <i class="bi bi-arrow-up fs-4"></i>
+    </button>
+
+    <!-- Bootstrap 5 Bundle JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Main JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

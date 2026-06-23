@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Julian's Raw Paws Portal</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Custom Style sheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- SECTION 1: Left Navigation Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-brand">
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" width="160" height="45" style="vertical-align: middle;">
+                        <path d="M25,12 C28,12 30,15 28,18 C26,21 24,21 22,18 C20,15 22,12 25,12 Z M37,18 C40,18 42,21 40,24 C38,27 36,27 34,24 C32,21 34,18 37,18 Z M13,18 C16,18 18,21 16,24 C14,27 12,27 10,24 C8,21 10,18 13,18 Z M25,24 C30,24 35,28 35,33 C35,39 30,42 25,42 C20,42 15,39 15,33 C15,28 20,24 25,24 Z" fill="#E65F2C" />
+                        <text x="52" y="32" font-family="'Outfit', sans-serif" font-weight="600" font-size="20" fill="#FFFFFF">RawPaws</text>
+                    </svg>
+                </a>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li class="sidebar-menu-item active">
+                    <a href="#analytics"><i class="bi bi-graph-up"></i> Analytics</a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a href="#users"><i class="bi bi-people"></i> Users & Pets</a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a href="#orders"><i class="bi bi-box-seam"></i> Order Lists</a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a href="#messages"><i class="bi bi-chat-left-text"></i> Messages</a>
+                </li>
+                <li class="sidebar-menu-item mt-auto">
+                    <a href="login.html"><i class="bi bi-box-arrow-left"></i> Logout</a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Workspace -->
+        <div class="dashboard-main">
+            <!-- SECTION 2: Dashboard Header Bar -->
+            <header class="dashboard-header-bar">
+                <div class="d-flex align-items-center gap-3">
+                    <button class="btn btn-outline-secondary d-lg-none" id="sidebarToggle" aria-label="Toggle Sidebar Menu">
+                        <i class="bi bi-list fs-4"></i>
+                    </button>
+                    <h1 class="h3 mb-0 text-secondary">Admin Portal</h1>
+                </div>
+                
+                <div class="d-flex align-items-center gap-3">
+                    <button class="header-toggle-btn theme-toggle-btn" aria-label="Toggle theme"><i class="bi bi-moon-stars-fill" aria-hidden="true"></i></button>
+                    <button class="header-toggle-btn rtl-toggle-btn" aria-label="Toggle layout direction">RTL</button>
+                    
+                    <a href="404.html" class="position-relative text-secondary p-1">
+                        <i class="bi bi-bell fs-4"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:0.6rem;">3</span>
+                    </a>
+                    
+                    <div class="d-flex align-items-center gap-2 border-start ps-3">
+                        <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=40" alt="Julian Thorne Profile" class="rounded-circle" style="width:40px; height:40px; object-fit:cover;">
+                        <span class="d-none d-md-inline small text-secondary fw-medium">Dr. Julian Thorne</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- SECTION 3: Active Workspace Panels -->
+            <main>
+                <!-- SUB-SECTION A: Analytics -->
+                <div class="dashboard-content-section" id="analytics">
+                    <div class="row g-4 mb-4">
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="metric-card">
+                                <div class="metric-icon"><i class="bi bi-check2-circle"></i></div>
+                                <div class="metric-info">
+                                    <h4>Subscriptions</h4>
+                                    <span>192</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="metric-card">
+                                <div class="metric-icon"><i class="bi bi-cash-stack"></i></div>
+                                <div class="metric-info">
+                                    <h4>Monthly Sales</h4>
+                                    <span>$8,450</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="metric-card">
+                                <div class="metric-icon"><i class="bi bi-egg-fried"></i></div>
+                                <div class="metric-info">
+                                    <h4>Blends Prepared</h4>
+                                    <span>1,432 lbs</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="metric-card">
+                                <div class="metric-icon"><i class="bi bi-chat-square-dots"></i></div>
+                                <div class="metric-info">
+                                    <h4>Inquiries</h4>
+                                    <span>4 Pending</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Charts Grid -->
+                    <div class="row g-4 mb-4">
+                        <div class="col-lg-8">
+                            <div class="p-4 border rounded bg-white" style="height:400px;">
+                                <h3 class="h5 mb-3 text-secondary">Subscription Growth Trend</h3>
+                                <div class="w-100 h-100" style="position:relative; height:320px;">
+                                    <canvas id="salesChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="p-4 border rounded bg-white" style="height:400px;">
+                                <h3 class="h5 mb-3 text-secondary">Popular Recipe Ratios</h3>
+                                <div class="w-100 h-100" style="position:relative; height:320px;">
+                                    <canvas id="recipeChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SUB-SECTION B: Users (Data Tables) -->
+                <div class="dashboard-content-section d-none" id="users">
+                    <div class="p-4 border rounded bg-white mb-4 text-start">
+                        <h3 class="h5 mb-3 text-secondary">Users & Pet Profiles</h3>
+                        <div class="table-responsive-custom">
+                            <table class="table-custom">
+                                <thead>
+                                    <tr>
+                                        <th>Pet Parent</th>
+                                        <th>Pet Name</th>
+                                        <th>Breed Species</th>
+                                        <th>Weight</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Clara Mitchell</td>
+                                        <td>Max</td>
+                                        <td>Golden Retriever</td>
+                                        <td>70 lbs</td>
+                                        <td><span class="badge bg-success">Active Plan</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Devon Cooper</td>
+                                        <td>Cleo</td>
+                                        <td>Persian Cat</td>
+                                        <td>11 lbs</td>
+                                        <td><span class="badge bg-success">Active Plan</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sarah Connor</td>
+                                        <td>Rex</td>
+                                        <td>German Shepherd</td>
+                                        <td>85 lbs</td>
+                                        <td><span class="badge bg-warning">Transitioning</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SUB-SECTION C: Orders -->
+                <div class="dashboard-content-section d-none" id="orders">
+                    <div class="p-4 border rounded bg-white mb-4 text-start">
+                        <h3 class="h5 mb-3 text-secondary">Active Subscription Orders</h3>
+                        <div class="table-responsive-custom">
+                            <table class="table-custom">
+                                <thead>
+                                    <tr>
+                                        <th>Order ID</th>
+                                        <th>Recipient</th>
+                                        <th>Formulation Base</th>
+                                        <th>Delivery Schedule</th>
+                                        <th>Payment State</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#RP-8832</td>
+                                        <td>Clara Mitchell</td>
+                                        <td>Turkey & Veggie</td>
+                                        <td>Every Thursday</td>
+                                        <td><span class="badge bg-success">Paid</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#RP-8833</td>
+                                        <td>Devon Cooper</td>
+                                        <td>Ancestral Beef</td>
+                                        <td>Every Wednesday</td>
+                                        <td><span class="badge bg-success">Paid</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#RP-8834</td>
+                                        <td>Sarah Connor</td>
+                                        <td>Chicken Feast</td>
+                                        <td>Every Thursday</td>
+                                        <td><span class="badge bg-secondary">Trial Pack</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SUB-SECTION D: Messages -->
+                <div class="dashboard-content-section d-none" id="messages">
+                    <div class="p-4 border rounded bg-white text-start">
+                        <h3 class="h5 mb-4 text-secondary">Customer Inquiries</h3>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="p-3 border rounded">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <h4 class="h6 mb-0 text-secondary">Marcus Vane</h4>
+                                        <span class="small text-muted">2 hrs ago</span>
+                                    </div>
+                                    <p class="small text-muted mb-2">"My kitten Oliver is turning 6 months next week. Should I shift him from the kitten diet plan to the standard adult chicken plan?"</p>
+                                    <a href="404.html" class="btn btn-sm btn-outline-primary py-1 px-3">Reply</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-3 border rounded">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <h4 class="h6 mb-0 text-secondary">Emma Watson</h4>
+                                        <span class="small text-muted">1 day ago</span>
+                                    </div>
+                                    <p class="small text-muted mb-2">"Is it possible to custom order a batch without ground bones? My dog has a specialized throat condition."</p>
+                                    <a href="404.html" class="btn btn-sm btn-outline-primary py-1 px-3">Reply</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Bootstrap 5 Bundle JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Main JS -->
+    <script src="assets/js/main.js"></script>
+    <!-- Custom Dashboard JS -->
+    <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

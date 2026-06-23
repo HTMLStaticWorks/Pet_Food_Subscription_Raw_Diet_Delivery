@@ -1,0 +1,70 @@
+/*
+ * Julian's Raw Paws - RTL Layout Overrides
+ * Activates when html[dir="rtl"]
+ */
+
+html[dir="rtl"] body {
+    text-align: right;
+}
+
+html[dir="rtl"] .text-start,
+html[dir="rtl"] th,
+html[dir="rtl"] td {
+    text-align: right !important;
+}
+
+html[dir="rtl"] .text-end {
+    text-align: left !important;
+}
+
+html[dir="rtl"] .ms-auto {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}
+
+html[dir="rtl"] .me-auto {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}
+
+/* Floating toggles & elements repositioning */
+html[dir="rtl"] .back-to-top {
+    right: auto;
+    left: 30px;
+}
+
+html[dir="rtl"] .auth-toggles {
+    right: auto;
+    left: 20px;
+}
+
+html[dir="rtl"] .password-toggle-eye {
+    right: auto;
+    left: 15px;
+}
+
+/* Alignment of list elements */
+html[dir="rtl"] .list-center-left {
+    text-align: right;
+}
+
+/* Form validation feedback */
+html[dir="rtl"] .invalid-feedback,
+html[dir="rtl"] .valid-feedback {
+    text-align: right;
+}
+
+/* Sidebar navigation */
+html[dir="rtl"] .dashboard-sidebar {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: none;
+}
+
+html[dir="rtl"] .sidebar-menu-item a {
+    border-left: none;
+}
+
+html[dir="rtl"] .sidebar-menu-item.active a {
+    border-right: 4px solid var(--color-primary);
+    border-left: none;
+}

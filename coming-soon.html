@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon | Julian's Raw Paws</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Custom Style sheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <style>
+        .countdown-box {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            min-width: 90px;
+            text-align: center;
+        }
+        .countdown-box span {
+            font-size: 2.2rem;
+            font-weight: var(--weight-h3);
+            color: var(--color-primary);
+            display: block;
+        }
+    </style>
+</head>
+<body class="auth-page-body">
+
+    <!-- Top Right Theme and RTL Action Toggles -->
+    <div class="auth-toggles">
+        <button class="header-toggle-btn theme-toggle-btn" aria-label="Toggle theme"><i class="bi bi-moon-stars-fill" aria-hidden="true"></i></button>
+        <button class="header-toggle-btn rtl-toggle-btn" aria-label="Toggle layout direction">RTL</button>
+    </div>
+
+    <!-- Centered Card -->
+    <div class="auth-card text-center" style="max-width: 600px;">
+        <!-- Site Logo -->
+        <div class="logo-wrapper mb-4">
+            <a href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" width="180" height="50" style="vertical-align: middle;">
+                    <path d="M25,12 C28,12 30,15 28,18 C26,21 24,21 22,18 C20,15 22,12 25,12 Z M37,18 C40,18 42,21 40,24 C38,27 36,27 34,24 C32,21 34,18 37,18 Z M13,18 C16,18 18,21 16,24 C14,27 12,27 10,24 C8,21 10,18 13,18 Z M25,24 C30,24 35,28 35,33 C35,39 30,42 25,42 C20,42 15,39 15,33 C15,28 20,24 25,24 Z" fill="#E65F2C" />
+                    <text x="52" y="32" font-family="'Outfit', sans-serif" font-weight="600" font-size="20" fill="#2A4B35">RawPaws</text>
+                </svg>
+            </a>
+        </div>
+        
+        <h2 class="h3 mb-3">Custom Raw Subscriptions Launching Soon</h2>
+        <p class="text-muted mb-4">I am currently building my kitchen scheduling system and custom packaging. Sign up below to get early bird pricing and transition guides.</p>
+        
+        <!-- Countdown Container -->
+        <div class="d-flex justify-content-center gap-3 mb-5">
+            <div class="countdown-box">
+                <span id="days">24</span>
+                <p class="caption-text mb-0">Days</p>
+            </div>
+            <div class="countdown-box">
+                <span id="hours">12</span>
+                <p class="caption-text mb-0">Hours</p>
+            </div>
+            <div class="countdown-box">
+                <span id="minutes">45</span>
+                <p class="caption-text mb-0">Mins</p>
+            </div>
+            <div class="countdown-box">
+                <span id="seconds">18</span>
+                <p class="caption-text mb-0">Secs</p>
+            </div>
+        </div>
+
+        <hr class="mb-4">
+        
+        <!-- Subscription -->
+        <h3 class="h5 mb-3 text-secondary">Notify Me When Prep Begins</h3>
+        <form class="needs-validation" novalidate>
+            <div class="row g-2">
+                <div class="col-sm-8">
+                    <input type="email" class="form-control" placeholder="Enter parent email address" required>
+                    <div class="invalid-feedback">Email field is required.</div>
+                </div>
+                <div class="col-sm-4">
+                    <button type="submit" class="btn-custom btn-custom-primary w-100 py-2">Join List</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Bootstrap 5 Bundle JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Main JS -->
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Countdown Timer Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set target countdown date (30 days in the future for testing)
+            const targetDate = new Date().getTime() + (30 * 24 * 60 * 60 * 1000);
+
+            function updateTimer() {
+                const now = new Date().getTime();
+                const diff = targetDate - now;
+
+                if (diff <= 0) {
+                    clearInterval(intervalId);
+                    return;
+                }
+
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = days;
+                document.getElementById('hours').textContent = hours;
+                document.getElementById('minutes').textContent = minutes;
+                document.getElementById('seconds').textContent = seconds;
+            }
+
+            updateTimer();
+            const intervalId = setInterval(updateTimer, 1000);
+        });
+    </script>
+</body>
+</html>

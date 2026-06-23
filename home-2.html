@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julian's Raw Paws | Premium Biological Diet Delivery</title>
+    <meta name="description" content="Custom-portioned, species-appropriate fresh raw diets for active dogs and cats. Discover the difference of professional, vet-backed raw pet nutrition.">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Custom Style sheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+    <!-- Sticky Header Navigation -->
+    <header class="sticky-header">
+        <div class="container-fluid px-lg-5 d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo-link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" width="180" height="50" style="vertical-align: middle;">
+                    <path d="M25,12 C28,12 30,15 28,18 C26,21 24,21 22,18 C20,15 22,12 25,12 Z M37,18 C40,18 42,21 40,24 C38,27 36,27 34,24 C32,21 34,18 37,18 Z M13,18 C16,18 18,21 16,24 C14,27 12,27 10,24 C8,21 10,18 13,18 Z M25,24 C30,24 35,28 35,33 C35,39 30,42 25,42 C20,42 15,39 15,33 C15,28 20,24 25,24 Z" fill="#E65F2C" />
+                    <text x="52" y="32" font-family="'Outfit', sans-serif" font-weight="600" font-size="20" fill="#2A4B35">RawPaws</text>
+                </svg>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="d-none d-xl-flex align-items-center gap-4">
+                <a href="index.html" class="nav-link-custom">Home 1</a>
+                <a href="home-2.html" class="nav-link-custom active">Home 2</a>
+                <a href="about.html" class="nav-link-custom">About</a>
+                <a href="services.html" class="nav-link-custom">Services</a>
+                <a href="pricing.html" class="nav-link-custom">Pricing</a>
+                <a href="gallery.html" class="nav-link-custom">Gallery</a>
+                <a href="booking.html" class="nav-link-custom">Book Now</a>
+                <a href="blog.html" class="nav-link-custom">Blog</a>
+                <a href="contact.html" class="nav-link-custom">Contact</a>
+                <a href="dashboard.html" class="nav-link-custom">Dashboard</a>
+            </nav>
+
+            <!-- Toggles and CTA Actions -->
+            <div class="d-flex align-items-center gap-2">
+                <button class="header-toggle-btn theme-toggle-btn" aria-label="Toggle theme"><i class="bi bi-moon-stars-fill" aria-hidden="true"></i></button>
+                <button class="header-toggle-btn rtl-toggle-btn" aria-label="Toggle layout direction">RTL</button>
+                
+                <a href="login.html" class="btn-custom btn-custom-outline py-2 px-3 d-none d-sm-inline-flex">Login</a>
+
+                <!-- Mobile Hamburger Menu Button -->
+                <button class="btn border-0 d-xl-none p-1 text-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas" aria-controls="mobileMenuOffcanvas" aria-label="Open navigation menu">
+                    <i class="bi bi-list fs-1"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Offcanvas Screen Menu -->
+    <div class="offcanvas offcanvas-end mobile-nav-fullscreen" tabindex="-1" id="mobileMenuOffcanvas" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header px-4 py-3 border-bottom">
+            <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column align-items-center justify-content-center">
+            <nav class="d-flex flex-column align-items-center gap-3">
+                <a href="index.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Home 1</a>
+                <a href="home-2.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Home 2</a>
+                <a href="about.html" class="nav-link-custom" data-bs-dismiss="offcanvas">About</a>
+                <a href="services.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Services</a>
+                <a href="pricing.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Pricing</a>
+                <a href="gallery.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Gallery</a>
+                <a href="booking.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Book Now</a>
+                <a href="blog.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Blog</a>
+                <a href="contact.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Contact</a>
+                <a href="dashboard.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Dashboard</a>
+            </nav>
+            <div class="d-flex flex-column gap-2 mt-5 w-75 text-center">
+                <a href="login.html" class="btn-custom btn-custom-outline w-100 py-2">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Header Spacer -->
+    <div class="header-spacer"></div>
+
+    <main>
+        <!-- SECTION 1: Hero Section (Niche / Premium Alternative Layout) -->
+        <section class="hero-general" style="background-image: url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&q=80&w=1200');">
+            <div class="container">
+                <span class="badge bg-primary text-white px-3 py-2 rounded-pill mb-3">Professional Grade Pet Wellness</span>
+                <h1 class="text-white">Formulated By Science. Fed By Nature.</h1>
+                <p class="lead text-white-50">I design premium biological raw foods featuring 100% pasture-raised meat and wild-caught ingredients. Delivered frozen to protect vital nutrients.</p>
+                <div class="d-flex justify-content-center flex-wrap gap-3 mt-4">
+                    <a href="booking.html" class="btn-custom btn-custom-primary">Subscribe Now</a>
+                    <a href="#calculator" class="btn-custom btn-custom-outline border-white text-white">Daily Cost Calculator</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Ingredient Sourcing -->
+        <section class="py-5 bg-white">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="mb-3">Uncompromising Ingredient Sourcing</h2>
+                    <p class="lead max-width-600 mx-auto">Every component in my recipes is sourced from local farms implementing ethical and sustainable agricultural principles.</p>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card-custom">
+                            <div class="card-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=400" alt="Pasture Raised meats Sourcing">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="h4 mb-2">100% Pasture Raised</h3>
+                                <p class="small text-muted">Free-range, grass-finished beef and pasture poultry. Zero hormones, zero preventative antibiotics.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card-custom">
+                            <div class="card-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1534088568595-a066f410bcda?auto=format&fit=crop&q=80&w=400" alt="Wild Caught Seafood Sourcing">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="h4 mb-2">Wild Caught Seafood</h3>
+                                <p class="small text-muted">Salmon and mackerel packed with vital omega-3 fatty acids for optimum cognitive and joint health.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card-custom">
+                            <div class="card-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1595855759920-86582396756a?auto=format&fit=crop&q=80&w=400" alt="Organic Organic Kelp Sourcing">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="h4 mb-2">Trace Sea Minerals</h3>
+                                <p class="small text-muted">Organic Norwegian kelp provides essential iodine and trace minerals protecting thyroid glands.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card-custom">
+                            <div class="card-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1610397613000-f0de065def22?auto=format&fit=crop&q=80&w=400" alt="Fresh Organ Meat Sourcing">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="h4 mb-2">Bio-Active Organs</h3>
+                                <p class="small text-muted">Fresh liver, kidney, and spleen supply essential vitamins A, B, and iron organically.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Daily Cost & Feed Calculator Widget -->
+        <section id="calculator" class="py-5">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="mb-3">Raw Feeding Calculator</h2>
+                    <p class="lead max-width-600 mx-auto">Calculate your pet's daily biological diet requirement and get an instant subscription cost estimation.</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="bg-white p-5 border rounded shadow-sm text-center">
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-medium text-secondary">Pet Type</label>
+                                    <select class="form-select" id="petType">
+                                        <option value="dog">Active Dog</option>
+                                        <option value="cat">Active Cat</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-medium text-secondary">Weight (lbs)</label>
+                                    <input type="number" class="form-control" id="petWeight" value="25" min="1" max="150">
+                                </div>
+                            </div>
+                            <button type="button" class="btn-custom btn-custom-primary mb-4" id="calculateBtn">Calculate Daily Diet</button>
+                            <hr>
+                            <div class="row mt-4 g-3">
+                                <div class="col-md-6 border-end">
+                                    <p class="small text-muted mb-1">Recommended Daily Meal</p>
+                                    <h4 class="h3 text-secondary mb-0" id="dailyAmount">0.63 lbs</h4>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="small text-muted mb-1">Estimated Cost / Day</p>
+                                    <h4 class="h3 text-primary mb-0" id="dailyCost">$4.38</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Comparative Transparency (Table) -->
+        <section class="py-5 bg-white">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="mb-3">Raw vs. Ultra-Processed Kibble</h2>
+                    <p class="lead max-width-600 mx-auto">See how fresh biologically appropriate raw foods stand against standard dry dog kibbles.</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="table-responsive-custom">
+                            <table class="table-custom">
+                                <thead>
+                                    <tr>
+                                        <th>Nutritional Category</th>
+                                        <th>Dr. Thorne's Raw Diet</th>
+                                        <th>Dry Commercial Kibble</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Ingredient Processing</strong></td>
+                                        <td>Flash frozen fresh ingredients (no heat applied)</td>
+                                        <td>Extruded at high heat (destroys active nutrients)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Protein Quality</strong></td>
+                                        <td>100% human-grade pasture-raised meat</td>
+                                        <td>Dehydrated meat meals & plant glutens</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Moisture Content</strong></td>
+                                        <td>Naturally high (70%+) to support renal filters</td>
+                                        <td>Dry (under 10%), placing constant strain on kidneys</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Additives & Preservatives</strong></td>
+                                        <td>None. Preserved solely via cold temperatures</td>
+                                        <td>Synthetic colors, binding starches, chemical shelf-life extenders</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Endorsements & Credentials -->
+        <section class="py-5">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="mb-3">Certifications & Professional Standards</h2>
+                    <p class="lead max-width-600 mx-auto">Providing certified, clinically researched canine & feline raw recipe programs for your absolute peace of mind.</p>
+                </div>
+                <div class="row g-4 text-center justify-content-center">
+                    <div class="col-6 col-md-3">
+                        <div class="p-3 border rounded bg-white">
+                            <i class="bi bi-shield-check text-primary fs-1 mb-2"></i>
+                            <h4 class="h5">FEDIAF Compliant</h4>
+                            <p class="small text-muted mb-0">Formulated to meet strict European guidelines.</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="p-3 border rounded bg-white">
+                            <i class="bi bi-award text-primary fs-1 mb-2"></i>
+                            <h4 class="h5">Raw Feed Certified</h4>
+                            <p class="small text-muted mb-0">Certified Advanced Canine Nutritionist specialist.</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="p-3 border rounded bg-white">
+                            <i class="bi bi-heart-pulse text-primary fs-1 mb-2"></i>
+                            <h4 class="h5">Clinical Research</h4>
+                            <p class="small text-muted mb-0">Regular testing and recipe biological profiling.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <!-- Column 1: Brand Logo + Moto -->
+                <div class="col-lg-3">
+                    <div class="footer-logo mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" width="180" height="50" style="vertical-align: middle;">
+                            <path d="M25,12 C28,12 30,15 28,18 C26,21 24,21 22,18 C20,15 22,12 25,12 Z M37,18 C40,18 42,21 40,24 C38,27 36,27 34,24 C32,21 34,18 37,18 Z M13,18 C16,18 18,21 16,24 C14,27 12,27 10,24 C8,21 10,18 13,18 Z M25,24 C30,24 35,28 35,33 C35,39 30,42 25,42 C20,42 15,39 15,33 C15,28 20,24 25,24 Z" fill="#E65F2C" />
+                            <text x="52" y="32" font-family="'Outfit', sans-serif" font-weight="600" font-size="20" fill="#FFFFFF">RawPaws</text>
+                        </svg>
+                    </div>
+                    <p class="small text-muted">I prepare biologically appropriate raw food diets customized for your pet's unique nutritional demands, delivered fresh to keep tails wagging.</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com" class="social-icon-link" aria-label="Facebook Profile"><i class="bi bi-facebook"></i></a>
+                        <a href="https://instagram.com" class="social-icon-link" aria-label="Instagram Profile"><i class="bi bi-instagram"></i></a>
+                        <a href="https://twitter.com" class="social-icon-link" aria-label="Twitter Profile"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://youtube.com" class="social-icon-link" aria-label="YouTube Channel"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="col-md-3 col-lg-2 offset-lg-1">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="home-2.html">Home 2</a></li>
+                        <li><a href="about.html">About Julian</a></li>
+                        <li><a href="services.html">Services</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Resources -->
+                <div class="col-md-3 col-lg-2">
+                    <h4 class="footer-title">Resources</h4>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="pricing.html">Diet Pricing</a></li>
+                        <li><a href="booking.html">Book Profile</a></li>
+                        <li><a href="gallery.html">Happy Pets Gallery</a></li>
+                        <li><a href="blog.html">Nutritional Blog</a></li>
+                        <li><a href="contact.html">Reach Out</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter Form -->
+                <div class="col-md-6 col-lg-4">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p class="small text-muted">Subscribe for raw transition tips, recipe updates, and discounts on custom trial packs.</p>
+                    <form class="newsletter-form needs-validation" novalidate>
+                        <div class="input-group mb-2">
+                            <input type="email" class="form-control" placeholder="Pet Parent Email" aria-label="Pet Parent Email" required>
+                            <button class="btn btn-custom btn-custom-primary px-3" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright Section -->
+            <div class="border-top border-secondary mt-5 pt-4 d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3">
+                <p class="small text-muted mb-0">&copy; 2026 RawPaws. Designed by Dr. Julian Thorne. All Rights Reserved.</p>
+                <div class="d-flex gap-3">
+                    <a href="404.html" class="small text-muted">Privacy Policy</a>
+                    <a href="404.html" class="small text-muted">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTopBtn" aria-label="Scroll back to top">
+        <i class="bi bi-arrow-up fs-4"></i>
+    </button>
+
+    <!-- Bootstrap 5 Bundle JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Main JS -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- Calculator Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const calculateBtn = document.getElementById('calculateBtn');
+            if (calculateBtn) {
+                calculateBtn.addEventListener('click', () => {
+                    const petType = document.getElementById('petType').value;
+                    const weight = parseFloat(document.getElementById('petWeight').value);
+                    
+                    if (isNaN(weight) || weight <= 0) return;
+
+                    // Standard calculation: raw feeding is approx 2.5% of body weight for adult dogs, 3% for cats
+                    const percentage = petType === 'dog' ? 0.025 : 0.03;
+                    const amount = (weight * percentage).toFixed(2);
+                    
+                    // Cost multiplier: dogs $7.00/lb average, cats $9.00/lb average
+                    const costPerLb = petType === 'dog' ? 7.00 : 9.00;
+                    const dailyCost = (amount * costPerLb).toFixed(2);
+
+                    document.getElementById('dailyAmount').textContent = `${amount} lbs`;
+                    document.getElementById('dailyCost').textContent = `$${dailyCost}`;
+                });
+            }
+        });
+    </script>
+</body>
+</html>

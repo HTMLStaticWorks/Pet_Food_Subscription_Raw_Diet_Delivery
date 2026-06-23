@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Julian's Raw Paws Portal</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Custom Style sheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body class="auth-page-body">
+
+    <!-- Top Right Theme and RTL Action Toggles -->
+    <div class="auth-toggles">
+        <button class="header-toggle-btn theme-toggle-btn" aria-label="Toggle theme"><i class="bi bi-moon-stars-fill" aria-hidden="true"></i></button>
+        <button class="header-toggle-btn rtl-toggle-btn" aria-label="Toggle layout direction">RTL</button>
+    </div>
+
+    <!-- Centered Login Form Card -->
+    <div class="auth-card">
+        <!-- Site Logo Inside Card -->
+        <div class="logo-wrapper">
+            <a href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" width="180" height="50" style="vertical-align: middle;">
+                    <path d="M25,12 C28,12 30,15 28,18 C26,21 24,21 22,18 C20,15 22,12 25,12 Z M37,18 C40,18 42,21 40,24 C38,27 36,27 34,24 C32,21 34,18 37,18 Z M13,18 C16,18 18,21 16,24 C14,27 12,27 10,24 C8,21 10,18 13,18 Z M25,24 C30,24 35,28 35,33 C35,39 30,42 25,42 C20,42 15,39 15,33 C15,28 20,24 25,24 Z" fill="#E65F2C" />
+                    <text x="52" y="32" font-family="'Outfit', sans-serif" font-weight="600" font-size="20" fill="#2A4B35">RawPaws</text>
+                </svg>
+            </a>
+        </div>
+        
+        <h2 class="h3 text-center mb-4">Welcome Back</h2>
+        
+        <form class="needs-validation" novalidate action="dashboard.html" method="GET">
+            <!-- Email (Stacked) -->
+            <div class="mb-3">
+                <label for="loginEmail" class="form-label text-secondary fw-medium small">Email Address</label>
+                <input type="email" class="form-control" id="loginEmail" placeholder="name@email.com" required>
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
+            
+            <!-- Password with Visibility Eye Toggle (Stacked) -->
+            <div class="mb-3">
+                <label for="loginPassword" class="form-label text-secondary fw-medium small">Password</label>
+                <div class="password-field-wrapper">
+                    <input type="password" class="form-control" id="loginPassword" placeholder="••••••••" required>
+                    <i class="bi bi-eye password-toggle-eye" aria-hidden="true"></i>
+                </div>
+                <div class="invalid-feedback">Please enter your password.</div>
+            </div>
+            
+            <!-- Remember Me & Forgot Password (Horizontal alignment) -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                    <label class="form-check-label text-muted small" for="rememberMe">Remember me</label>
+                </div>
+                <a href="404.html" class="small text-primary text-decoration-none">Forgot Password?</a>
+            </div>
+            
+            <!-- CTA Button (Full width matching inputs) -->
+            <button type="submit" class="btn-custom btn-custom-primary w-100 py-2.5 mb-4">Log In</button>
+            
+            <!-- Social Login Divider -->
+            <div class="position-relative text-center mb-4">
+                <hr class="text-muted">
+                <span class="position-absolute top-50 start-50 translate-middle bg-white px-2 text-muted small">Or login with</span>
+            </div>
+            
+            <!-- Social Buttons -->
+            <div class="d-flex gap-3 mb-4">
+                <a href="dashboard.html" class="btn btn-outline-secondary w-100 d-flex align-items-center justify-content-center gap-2 small py-2">
+                    <i class="bi bi-google text-danger"></i> Google
+                </a>
+                <a href="dashboard.html" class="btn btn-outline-secondary w-100 d-flex align-items-center justify-content-center gap-2 small py-2">
+                    <i class="bi bi-apple text-dark"></i> Apple
+                </a>
+            </div>
+            
+            <!-- Register link -->
+            <p class="text-center text-muted small mb-0">Don't have an account? <a href="register.html" class="text-primary text-decoration-none">Sign up</a></p>
+        </form>
+    </div>
+
+    <!-- Bootstrap 5 Bundle JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Main JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

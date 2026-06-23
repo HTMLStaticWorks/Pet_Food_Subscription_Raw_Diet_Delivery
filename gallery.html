@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Companions Gallery | Dr. Julian Thorne</title>
+    <meta name="description" content="View our gallery of thriving pets on raw diets. See our fresh kitchen preps, raw recipes, and happy dogs and cats.">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Custom Style sheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <style>
+        .gallery-filter-btn {
+            background-color: transparent;
+            border: 1px solid var(--color-secondary);
+            color: var(--color-secondary);
+            font-size: 0.95rem;
+            font-weight: var(--weight-btn);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+        .gallery-filter-btn.active,
+        .gallery-filter-btn:hover {
+            background-color: var(--color-secondary);
+            color: #FFFFFF;
+        }
+        .gallery-item {
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            position: relative;
+            height: 280px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-smooth);
+        }
+        .gallery-item:hover img {
+            transform: scale(1.06);
+        }
+        .gallery-item-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(42, 75, 53, 0.7);
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFFFFF;
+            transition: var(--transition-smooth);
+            font-weight: var(--weight-bold);
+        }
+        .gallery-item:hover .gallery-item-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Header Navigation -->
+    <header class="sticky-header">
+        <div class="container-fluid px-lg-5 d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo-link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" width="180" height="50" style="vertical-align: middle;">
+                    <path d="M25,12 C28,12 30,15 28,18 C26,21 24,21 22,18 C20,15 22,12 25,12 Z M37,18 C40,18 42,21 40,24 C38,27 36,27 34,24 C32,21 34,18 37,18 Z M13,18 C16,18 18,21 16,24 C14,27 12,27 10,24 C8,21 10,18 13,18 Z M25,24 C30,24 35,28 35,33 C35,39 30,42 25,42 C20,42 15,39 15,33 C15,28 20,24 25,24 Z" fill="#E65F2C" />
+                    <text x="52" y="32" font-family="'Outfit', sans-serif" font-weight="600" font-size="20" fill="#2A4B35">RawPaws</text>
+                </svg>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="d-none d-xl-flex align-items-center gap-4">
+                <a href="index.html" class="nav-link-custom">Home 1</a>
+                <a href="home-2.html" class="nav-link-custom">Home 2</a>
+                <a href="about.html" class="nav-link-custom">About</a>
+                <a href="services.html" class="nav-link-custom">Services</a>
+                <a href="pricing.html" class="nav-link-custom">Pricing</a>
+                <a href="gallery.html" class="nav-link-custom active">Gallery</a>
+                <a href="booking.html" class="nav-link-custom">Book Now</a>
+                <a href="blog.html" class="nav-link-custom">Blog</a>
+                <a href="contact.html" class="nav-link-custom">Contact</a>
+                <a href="dashboard.html" class="nav-link-custom">Dashboard</a>
+            </nav>
+
+            <!-- Toggles and CTA Actions -->
+            <div class="d-flex align-items-center gap-2">
+                <button class="header-toggle-btn theme-toggle-btn" aria-label="Toggle theme"><i class="bi bi-moon-stars-fill" aria-hidden="true"></i></button>
+                <button class="header-toggle-btn rtl-toggle-btn" aria-label="Toggle layout direction">RTL</button>
+                
+                <a href="login.html" class="btn-custom btn-custom-outline py-2 px-3 d-none d-sm-inline-flex">Login</a>
+
+                <!-- Mobile Hamburger Menu Button -->
+                <button class="btn border-0 d-xl-none p-1 text-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas" aria-controls="mobileMenuOffcanvas" aria-label="Open navigation menu">
+                    <i class="bi bi-list fs-1"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Offcanvas Screen Menu -->
+    <div class="offcanvas offcanvas-end mobile-nav-fullscreen" tabindex="-1" id="mobileMenuOffcanvas" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header px-4 py-3 border-bottom">
+            <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column align-items-center justify-content-center">
+            <nav class="d-flex flex-column align-items-center gap-3">
+                <a href="index.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Home 1</a>
+                <a href="home-2.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Home 2</a>
+                <a href="about.html" class="nav-link-custom" data-bs-dismiss="offcanvas">About</a>
+                <a href="services.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Services</a>
+                <a href="pricing.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Pricing</a>
+                <a href="gallery.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Gallery</a>
+                <a href="booking.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Book Now</a>
+                <a href="blog.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Blog</a>
+                <a href="contact.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Contact</a>
+                <a href="dashboard.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Dashboard</a>
+            </nav>
+            <div class="d-flex flex-column gap-2 mt-5 w-75 text-center">
+                <a href="login.html" class="btn-custom btn-custom-outline w-100 py-2">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Header Spacer -->
+    <div class="header-spacer"></div>
+
+    <main>
+        <!-- SECTION 1: Hero Section (Center-aligned + Background Image) -->
+        <section class="hero-general" style="background-image: url('https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&q=80&w=1200');">
+            <div class="container">
+                <h1>Healthy Companions Gallery</h1>
+                <p class="lead text-white-50">See real results of dogs and cats thriving on my custom raw diets. View fresh batch preps and customer transition success photos.</p>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Category Filter Grid -->
+        <section class="py-5 bg-white">
+            <div class="container">
+                <!-- Filter Buttons -->
+                <div class="d-flex justify-content-center gap-2 flex-wrap mb-5">
+                    <button type="button" class="gallery-filter-btn active" data-filter="all">Show All</button>
+                    <button type="button" class="gallery-filter-btn" data-filter="recipes">Diet Batches</button>
+                    <button type="button" class="gallery-filter-btn" data-filter="dogs">Happy Dogs</button>
+                    <button type="button" class="gallery-filter-btn" data-filter="cats">Happy Cats</button>
+                </div>
+
+                <!-- Grid Items -->
+                <div class="row g-4 justify-content-center" id="galleryGrid">
+                    <div class="col-sm-6 col-lg-4 gallery-card" data-category="dogs">
+                        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&q=80&w=800" data-title="Max the Golden Retriever">
+                            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&q=80&w=400" alt="Max the dog thriving on raw beef">
+                            <div class="gallery-item-overlay">
+                                <span>Max (Beef Diet)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 gallery-card" data-category="recipes">
+                        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&q=80&w=800" data-title="Ancestral Beef Preparation">
+                            <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&q=80&w=400" alt="Fresh portioned raw food preparation">
+                            <div class="gallery-item-overlay">
+                                <span>BARF Beef Mix</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 gallery-card" data-category="cats">
+                        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&q=80&w=800" data-title="Cleo the Persian Cat">
+                            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&q=80&w=400" alt="Cleo the Persian cat enjoying raw turkey diet">
+                            <div class="gallery-item-overlay">
+                                <span>Cleo (Turkey Diet)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 gallery-card" data-category="recipes">
+                        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=800" data-title="Fresh Organ & Veggie Base">
+                            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=400" alt="Fresh organic preparation batches">
+                            <div class="gallery-item-overlay">
+                                <span>Organic Kelp & Hearts</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 gallery-card" data-category="dogs">
+                        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-src="https://images.unsplash.com/photo-1535930891776-0c2dfb7fda1a?auto=format&fit=crop&q=80&w=800" data-title="Bella the French Bulldog">
+                            <img src="https://images.unsplash.com/photo-1535930891776-0c2dfb7fda1a?auto=format&fit=crop&q=80&w=400" alt="Bella the frenchie on raw chicken feast">
+                            <div class="gallery-item-overlay">
+                                <span>Bella (Chicken Feast)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 gallery-card" data-category="cats">
+                        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?auto=format&fit=crop&q=80&w=800" data-title="Oliver the Tabby">
+                            <img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?auto=format&fit=crop&q=80&w=400" alt="Cat eating salmon mix">
+                            <div class="gallery-item-overlay">
+                                <span>Oliver (Salmon Mix)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Submit Photos CTA -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-7">
+                        <div class="p-5 border rounded bg-white shadow-sm">
+                            <i class="bi bi-camera text-primary fs-1 mb-3"></i>
+                            <h3 class="h4 mb-3">Share Your Pet's Transition Story</h3>
+                            <p class="text-muted mb-4">Send a before-and-after photo of your dog or cat thriving on my subscription raw diets. If featured in my gallery, I will add a free bag of custom organic sea treats to your next shipping cycle.</p>
+                            <a href="contact.html" class="btn-custom btn-custom-primary">Submit Story Photo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-labelledby="lightboxModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title h5 text-secondary" id="lightboxModalLabel">Featured Image</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center p-0">
+                    <img id="lightboxImage" src="" alt="" class="img-fluid w-100 rounded-bottom">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <!-- Column 1: Brand Logo + Moto -->
+                <div class="col-lg-3">
+                    <div class="footer-logo mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" width="180" height="50" style="vertical-align: middle;">
+                            <path d="M25,12 C28,12 30,15 28,18 C26,21 24,21 22,18 C20,15 22,12 25,12 Z M37,18 C40,18 42,21 40,24 C38,27 36,27 34,24 C32,21 34,18 37,18 Z M13,18 C16,18 18,21 16,24 C14,27 12,27 10,24 C8,21 10,18 13,18 Z M25,24 C30,24 35,28 35,33 C35,39 30,42 25,42 C20,42 15,39 15,33 C15,28 20,24 25,24 Z" fill="#E65F2C" />
+                            <text x="52" y="32" font-family="'Outfit', sans-serif" font-weight="600" font-size="20" fill="#FFFFFF">RawPaws</text>
+                        </svg>
+                    </div>
+                    <p class="small text-muted">I prepare biologically appropriate raw food diets customized for your pet's unique nutritional demands, delivered fresh to keep tails wagging.</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com" class="social-icon-link" aria-label="Facebook Profile"><i class="bi bi-facebook"></i></a>
+                        <a href="https://instagram.com" class="social-icon-link" aria-label="Instagram Profile"><i class="bi bi-instagram"></i></a>
+                        <a href="https://twitter.com" class="social-icon-link" aria-label="Twitter Profile"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://youtube.com" class="social-icon-link" aria-label="YouTube Channel"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="col-md-3 col-lg-2 offset-lg-1">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="home-2.html">Home 2</a></li>
+                        <li><a href="about.html">About Julian</a></li>
+                        <li><a href="services.html">Services</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Resources -->
+                <div class="col-md-3 col-lg-2">
+                    <h4 class="footer-title">Resources</h4>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="pricing.html">Diet Pricing</a></li>
+                        <li><a href="booking.html">Book Profile</a></li>
+                        <li><a href="gallery.html">Happy Pets Gallery</a></li>
+                        <li><a href="blog.html">Nutritional Blog</a></li>
+                        <li><a href="contact.html">Reach Out</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter Form -->
+                <div class="col-md-6 col-lg-4">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p class="small text-muted">Subscribe for raw transition tips, recipe updates, and discounts on custom trial packs.</p>
+                    <form class="newsletter-form needs-validation" novalidate>
+                        <div class="input-group mb-2">
+                            <input type="email" class="form-control" placeholder="Pet Parent Email" aria-label="Pet Parent Email" required>
+                            <button class="btn btn-custom btn-custom-primary px-3" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright Section -->
+            <div class="border-top border-secondary mt-5 pt-4 d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3">
+                <p class="small text-muted mb-0">&copy; 2026 RawPaws. Designed by Dr. Julian Thorne. All Rights Reserved.</p>
+                <div class="d-flex gap-3">
+                    <a href="404.html" class="small text-muted">Privacy Policy</a>
+                    <a href="404.html" class="small text-muted">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTopBtn" aria-label="Scroll back to top">
+        <i class="bi bi-arrow-up fs-4"></i>
+    </button>
+
+    <!-- Bootstrap 5 Bundle JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Main JS -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- Gallery & Lightbox scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Category Filter Logic
+            const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+            const galleryCards = document.querySelectorAll('.gallery-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update active button
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    galleryCards.forEach(card => {
+                        const category = card.getAttribute('data-category');
+                        if (filterValue === 'all' || category === filterValue) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Lightbox Modal Logic
+            const lightboxModal = document.getElementById('lightboxModal');
+            if (lightboxModal) {
+                lightboxModal.addEventListener('show.bs.modal', (event) => {
+                    const button = event.relatedTarget;
+                    const src = button.getAttribute('data-src');
+                    const title = button.getAttribute('data-title');
+
+                    const modalTitle = lightboxModal.querySelector('.modal-title');
+                    const modalImg = lightboxModal.querySelector('#lightboxImage');
+
+                    modalTitle.textContent = title;
+                    modalImg.setAttribute('src', src);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
