@@ -19,9 +19,14 @@
     --bg-body: #FDFBF7;
     --bg-card: #FFFFFF;
     --text-primary: #1A251E;
-    --text-secondary: #4A584F;
+    --text-secondary: #2E3B33; /* Darker, high-contrast forest green-gray for excellent readability */
     --border-color: #E2E8F0;
     --border-radius: 12px;
+    
+    --bg-footer: #F5F3EC; /* Soft light cream for light theme footer */
+    --text-footer: #2A4B35; /* secondary color for footer text in light theme */
+    --text-footer-muted: #5C6E63;
+    --border-footer: rgba(42, 75, 53, 0.15);
     
     /* Layout Constants */
     --header-height: 80px;
@@ -32,8 +37,8 @@
     --weight-h2: 540;
     --weight-h3: 520;
     --weight-h4-h6: 500;
-    --weight-body: 410;
-    --weight-lead: 480;
+    --weight-body: 450; /* Increased from 410 to 450 for thicker, clearer text */
+    --weight-lead: 500; /* Increased from 480 to 500 */
     --weight-btn: 510;
     --weight-nav: 480;
     --weight-caption: 400;
@@ -88,13 +93,13 @@ h4, .h4, h5, .h5, h6, .h6 {
 }
 
 p, .body-text {
-    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    font-size: clamp(1.05rem, 2vw, 1.25rem); /* Increased from 0.9rem-1.2rem */
     font-weight: var(--weight-body);
     color: var(--text-secondary);
 }
 
 .lead, .subheading-text {
-    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem); /* Increased from 1.1rem-1.5rem */
     font-weight: var(--weight-lead);
     color: var(--text-secondary);
 }
@@ -241,10 +246,19 @@ section .section-header {
     background-color: var(--bg-body);
 }
 
+.mobile-nav-fullscreen .offcanvas-body {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important; /* Fix Flexbox vertical center scroll cutoff bug */
+    overflow-y: auto !important;
+    padding: 3rem 1.5rem !important;
+}
+
 .mobile-nav-fullscreen .nav-link-custom {
-    font-size: 2rem;
-    font-weight: var(--weight-h3);
-    margin: 1rem 0;
+    font-size: clamp(1.2rem, 3.5vh, 1.8rem); /* Scale dynamically based on viewport height */
+    font-weight: var(--weight-h4-h6);
+    margin: 0.5rem 0; /* Reduced margin to optimize spacing */
     display: block;
     text-align: center;
 }
@@ -294,6 +308,13 @@ section .section-header {
     margin: 1rem 0 1.5rem 0;
     text-align: center;
     flex-grow: 1;
+}
+
+.card-custom .card-content h3 {
+    min-height: 2.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card-custom .card-btn {
@@ -399,20 +420,29 @@ section .section-header {
 
 /* Footer Styles */
 footer {
-    background-color: var(--color-secondary);
-    color: #E2E8F0;
+    background-color: var(--bg-footer);
+    color: var(--text-footer);
     padding: 5rem 0 2rem 0;
     text-align: left;
+    border-top: 1px solid var(--border-color);
+}
+
+footer p,
+footer .text-muted {
+    color: var(--text-footer) !important;
+    opacity: 0.85;
 }
 
 footer a {
-    color: #A5B5A9;
+    color: var(--text-footer);
     text-decoration: none;
     transition: var(--transition-smooth);
+    opacity: 0.85;
 }
 
 footer a:hover {
     color: var(--color-primary);
+    opacity: 1;
 }
 
 footer .footer-logo img {
@@ -428,19 +458,24 @@ footer .social-icons {
     gap: 1rem;
 }
 
-footer .social-icon-link {
+.social-icon-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.08);
-    color: #FFFFFF;
+    background-color: rgba(42, 75, 53, 0.08);
+    color: var(--color-secondary);
     transition: var(--transition-smooth);
 }
 
-footer .social-icon-link:hover {
+body.dark-theme .social-icon-link {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #FFFFFF;
+}
+
+.social-icon-link:hover {
     background-color: var(--color-primary);
     color: #FFFFFF;
     transform: translateY(-3px);
@@ -449,10 +484,14 @@ footer .social-icon-link:hover {
 footer .footer-title {
     font-size: 1.25rem;
     font-weight: var(--weight-bold);
-    color: #FFFFFF;
+    color: var(--color-secondary);
     margin-bottom: 1.5rem;
     position: relative;
     padding-bottom: 0.5rem;
+}
+
+body.dark-theme footer .footer-title {
+    color: #FFFFFF;
 }
 
 footer .footer-title::after {
@@ -467,21 +506,32 @@ footer .footer-title::after {
 
 /* Newsletter Input styling */
 .newsletter-form .form-control {
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    color: #FFFFFF;
+    background-color: rgba(42, 75, 53, 0.05);
+    border: 1px solid rgba(42, 75, 53, 0.15);
+    color: var(--text-primary);
     border-radius: 50px;
     padding: 0.75rem 1.5rem;
 }
 
+body.dark-theme .newsletter-form .form-control {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #FFFFFF;
+}
+
 .newsletter-form .form-control::placeholder {
-    color: #A5B5A9;
+    color: var(--text-footer-muted);
 }
 
 .newsletter-form .form-control:focus {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(42, 75, 53, 0.08);
     border-color: var(--color-primary);
     box-shadow: none;
+    color: var(--text-primary);
+}
+
+body.dark-theme .newsletter-form .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.1);
     color: #FFFFFF;
 }
 
@@ -571,6 +621,11 @@ footer .footer-title::after {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
 }
 
+.auth-card h2,
+.auth-card .h3 {
+    font-size: clamp(1.4rem, 2.2vw, 1.75rem) !important;
+}
+
 .auth-card .logo-wrapper {
     display: flex;
     justify-content: center;
@@ -617,7 +672,7 @@ footer .footer-title::after {
     color: var(--color-secondary);
     font-weight: var(--weight-bold);
     padding: 1rem 1.5rem;
-    text-align: left;
+    text-align: center;
     border-bottom: 2px solid var(--border-color);
 }
 
@@ -630,8 +685,8 @@ footer .footer-title::after {
 /* Dashboard Layout Styles */
 .dashboard-container {
     display: flex;
-    min-height: 100vh;
-    padding-top: 0;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .dashboard-sidebar {
@@ -642,11 +697,17 @@ footer .footer-title::after {
     flex-direction: column;
     transition: var(--transition-smooth);
     z-index: 1000;
+    height: 100vh;
+    flex-shrink: 0;
 }
 
 .dashboard-sidebar .sidebar-brand {
-    padding: 1.5rem 2rem;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
     border-bottom: 1px solid rgba(255,255,255,0.1);
+    box-sizing: border-box;
 }
 
 .dashboard-sidebar .sidebar-brand img {
@@ -683,17 +744,26 @@ footer .footer-title::after {
 .dashboard-main {
     flex-grow: 1;
     background-color: var(--bg-body);
-    padding: 2.5rem;
+    padding: 0 2.5rem 2.5rem 2.5rem;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 .dashboard-header-bar {
+    position: sticky;
+    top: 0;
+    z-index: 990;
+    background-color: var(--bg-body);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 90px;
+    padding: 0;
     margin-bottom: 2.5rem;
     border-bottom: 1px solid var(--border-color);
-    padding-bottom: 1.5rem;
+    box-sizing: border-box;
 }
 
 .metric-card {
@@ -762,9 +832,11 @@ footer .footer-title::after {
     width: 80px;
     height: 80px;
     margin: 0 auto 1.5rem auto;
+    overflow: visible;
 }
 
 .testimonial-author-img {
+    display: block;
     width: 80px;
     height: 80px;
     object-fit: cover;
@@ -782,3 +854,136 @@ footer .footer-title::after {
 .card-custom.popular-card {
     overflow: visible;
 }
+
+/* Testimonial Premium Redesign */
+.testimonial-card-premium {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 3rem 2.5rem;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--transition-smooth);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.testimonial-card-premium:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(42, 75, 53, 0.06);
+    border-color: rgba(230, 95, 44, 0.3);
+}
+
+.testimonial-card-premium .quote-icon-wrapper {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 3rem;
+    color: rgba(230, 95, 44, 0.1);
+    line-height: 1;
+}
+
+.testimonial-card-premium .stars-wrapper {
+    margin-bottom: 1.5rem;
+    color: #FFB800;
+    font-size: 1.1rem;
+}
+
+.testimonial-card-premium .testimonial-text {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-style: italic;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.testimonial-card-premium .author-details-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.testimonial-card-premium .author-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--color-primary);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-card-premium .author-meta h4 {
+    font-size: 1.2rem;
+    font-weight: var(--weight-bold);
+    color: var(--color-secondary);
+    margin-bottom: 0.25rem;
+}
+
+.testimonial-card-premium .author-meta p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 0;
+}
+
+/* Maintain same brand name color in both themes for navbar and footer */
+.logo-link svg text,
+.footer-logo svg text {
+    fill: var(--color-secondary) !important;
+}
+
+.sidebar-brand svg text {
+    fill: #FFFFFF !important;
+}
+
+/* Custom Hero Section Badge */
+.custom-hero-badge {
+    background-color: rgba(253, 251, 247, 0.9); /* Solid light ivory base */
+    color: var(--color-secondary) !important;
+    font-size: 0.95rem;
+    font-weight: var(--weight-bold);
+    display: inline-block;
+    border: 1px solid rgba(42, 75, 53, 0.15);
+}
+
+/* Footer Layout Adjustment: Space columns evenly to avoid overlapping */
+@media (min-width: 992px) {
+    footer .row {
+        justify-content: space-between !important;
+    }
+    footer .row > div {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+/* Sidebar Custom Logout Button Styling */
+.btn-logout {
+    background-color: rgba(220, 53, 69, 0.1) !important;
+    color: #FF8F94 !important;
+    border: 1px solid rgba(220, 53, 69, 0.2) !important;
+    border-radius: 6px !important;
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    transition: var(--transition-smooth);
+}
+
+.btn-logout:hover {
+    background-color: rgba(220, 53, 69, 0.2) !important;
+    color: #FFB3B6 !important;
+    border-color: rgba(220, 53, 69, 0.3) !important;
+    transform: translateY(-1px);
+}
+
+/* Dashboard Profile Divider */
+.admin-profile-container {
+    border-left: 1px solid var(--border-color);
+    padding-left: 1rem;
+}
+
+
+
+
+
+

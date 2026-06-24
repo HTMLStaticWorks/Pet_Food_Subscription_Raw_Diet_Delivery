@@ -9,6 +9,11 @@ body.dark-theme {
     --text-primary: #F0F6F2;
     --text-secondary: #A5B5A9;
     --border-color: #2D3A31;
+    
+    --bg-footer: #0E1210; /* Dark background for dark theme footer */
+    --text-footer: #A5B5A9; /* Light muted text */
+    --text-footer-muted: #6B7C72;
+    --border-footer: rgba(255, 255, 255, 0.1);
 }
 
 body.dark-theme .sticky-header {
@@ -57,6 +62,7 @@ body.dark-theme .table-responsive-custom {
 body.dark-theme .table-custom th {
     background-color: rgba(255, 255, 255, 0.03);
     border-bottom-color: var(--border-color);
+    color: var(--text-primary) !important;
 }
 
 body.dark-theme .table-custom td {
@@ -69,17 +75,29 @@ body.dark-theme .auth-card {
     border-color: var(--border-color);
 }
 
-body.dark-theme .form-control {
+body.dark-theme .form-control,
+body.dark-theme .form-select {
     background-color: rgba(255, 255, 255, 0.05);
     border-color: var(--border-color);
     color: var(--text-primary);
 }
 
-body.dark-theme .form-control:focus {
+body.dark-theme .form-control:focus,
+body.dark-theme .form-select:focus {
     background-color: rgba(255, 255, 255, 0.08);
     border-color: var(--color-primary);
     color: var(--text-primary);
 }
+
+body.dark-theme .form-select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23F0F6F2' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e") !important;
+}
+
+body.dark-theme .form-select option {
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+}
+
 
 body.dark-theme .form-control::placeholder {
     color: rgba(255, 255, 255, 0.3);
@@ -176,3 +194,82 @@ body.dark-theme h6,
 body.dark-theme .h6 {
     color: var(--text-primary) !important;
 }
+
+/* Force header and footer to have the exact same background color in dark theme */
+body.dark-theme .sticky-header,
+body.dark-theme footer {
+    background-color: #121613 !important;
+}
+
+/* Custom Hero Section Badge Dark Theme Override */
+body.dark-theme .custom-hero-badge {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #FFFFFF !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    backdrop-filter: blur(8px);
+}
+
+/* About Page Stat Numbers Dark Theme Orange Color Override */
+body.dark-theme .about-stat-number {
+    color: var(--color-primary) !important;
+}
+
+/* Keep price calculator results orange in dark theme */
+body.dark-theme #monthlyResult,
+body.dark-theme #dailyCost {
+    color: var(--color-primary) !important;
+}
+
+/* Gallery Page Filter Buttons Dark Theme Override */
+body.dark-theme .gallery-filter-btn {
+    border-color: var(--text-secondary) !important;
+    color: var(--text-secondary) !important;
+}
+
+body.dark-theme .gallery-filter-btn.active,
+body.dark-theme .gallery-filter-btn:hover {
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+    color: #FFFFFF !important;
+}
+
+/* Input Group Text Addon Dark Theme Override */
+body.dark-theme .input-group-text {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Badge Dark Theme Override for Blog Page Category Tags */
+body.dark-theme .badge.bg-secondary-subtle {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    color: var(--text-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+/* Google Map Iframe Dark Theme Filter */
+body.dark-theme .google-map-iframe {
+    filter: invert(90%) hue-rotate(180deg) grayscale(10%) contrast(90%);
+}
+
+/* Border overrides in dark theme */
+body.dark-theme .border,
+body.dark-theme .border-top,
+body.dark-theme .border-bottom,
+body.dark-theme .border-start,
+body.dark-theme .border-end {
+    border-color: var(--border-color) !important;
+}
+
+/* Apple Icon Visibility in Dark Theme */
+body.dark-theme .bi-apple.text-dark {
+    color: #FFFFFF !important;
+}
+
+/* Authentication Page Brand Name Visibility in Dark Theme */
+body.dark-theme .logo-wrapper svg text {
+    fill: #FFFFFF !important;
+}
+
+
+

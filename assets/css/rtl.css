@@ -68,3 +68,74 @@ html[dir="rtl"] .sidebar-menu-item.active a {
     border-right: 4px solid var(--color-primary);
     border-left: none;
 }
+
+/* Fix brand logo SVG text layout in RTL mode */
+html[dir="rtl"] .logo-link,
+html[dir="rtl"] .logo-wrapper,
+html[dir="rtl"] .sidebar-brand,
+html[dir="rtl"] .footer-logo,
+html[dir="rtl"] .logo-link svg,
+html[dir="rtl"] .logo-wrapper svg,
+html[dir="rtl"] .sidebar-brand svg,
+html[dir="rtl"] .footer-logo svg {
+    direction: ltr !important;
+}
+
+html[dir="rtl"] svg text {
+    direction: ltr !important;
+    text-anchor: start !important;
+    unicode-bidi: bidi-override !important;
+}
+
+/* Footer RTL Column Offsets Fix */
+@media (min-width: 992px) {
+    html[dir="rtl"] footer .row > div {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+}
+
+
+
+/* Accordion RTL Overrides */
+html[dir="rtl"] .accordion-button {
+    text-align: right !important;
+}
+
+html[dir="rtl"] .accordion-button::after {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}
+
+/* Form Select RTL Overrides */
+html[dir="rtl"] .form-select {
+    background-position: left 0.75rem center !important;
+    padding-left: 2.25rem !important;
+    padding-right: 0.75rem !important;
+}
+
+/* Dashboard Profile Divider RTL */
+html[dir="rtl"] .admin-profile-container {
+    border-left: none !important;
+    border-right: 1px solid var(--border-color) !important;
+    padding-left: 0 !important;
+    padding-right: 1rem !important;
+}
+
+/* Offcanvas Header RTL Close Button Layout Fix */
+html[dir="rtl"] .offcanvas-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    flex-direction: row-reverse !important;
+    align-items: center !important;
+}
+
+html[dir="rtl"] .offcanvas-header .btn-close {
+    margin: 0 !important;
+}
+
+
+
+
+
+

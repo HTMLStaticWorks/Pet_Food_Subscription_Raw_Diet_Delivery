@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
@@ -64,16 +64,16 @@
         </div>
         <div class="offcanvas-body d-flex flex-column align-items-center justify-content-center">
             <nav class="d-flex flex-column align-items-center gap-3">
-                <a href="index.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Home 1</a>
-                <a href="home-2.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Home 2</a>
-                <a href="about.html" class="nav-link-custom" data-bs-dismiss="offcanvas">About</a>
-                <a href="services.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Services</a>
-                <a href="pricing.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Pricing</a>
-                <a href="gallery.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Gallery</a>
-                <a href="booking.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Book Now</a>
-                <a href="blog.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Blog</a>
-                <a href="contact.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Contact</a>
-                <a href="dashboard.html" class="nav-link-custom" data-bs-dismiss="offcanvas">Dashboard</a>
+                <a href="index.html" class="nav-link-custom">Home 1</a>
+                <a href="home-2.html" class="nav-link-custom">Home 2</a>
+                <a href="about.html" class="nav-link-custom">About</a>
+                <a href="services.html" class="nav-link-custom">Services</a>
+                <a href="pricing.html" class="nav-link-custom">Pricing</a>
+                <a href="gallery.html" class="nav-link-custom">Gallery</a>
+                <a href="booking.html" class="nav-link-custom">Book Now</a>
+                <a href="blog.html" class="nav-link-custom">Blog</a>
+                <a href="contact.html" class="nav-link-custom">Contact</a>
+                <a href="dashboard.html" class="nav-link-custom">Dashboard</a>
             </nav>
             <div class="d-flex flex-column gap-2 mt-5 w-75 text-center">
                 <a href="login.html" class="btn-custom btn-custom-outline w-100 py-2">Login</a>
@@ -97,7 +97,7 @@
         <section class="py-5 bg-white">
             <div class="container">
                 <div class="row g-4 justify-content-center">
-                    <div class="col-md-4">
+                    <div class="col-lg-3 col-md-6">
                         <div class="card-custom">
                             <div class="card-content">
                                 <i class="bi bi-envelope text-primary fs-1 mb-3"></i>
@@ -107,7 +107,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-lg-3 col-md-6">
                         <div class="card-custom">
                             <div class="card-content">
                                 <i class="bi bi-telephone text-primary fs-1 mb-3"></i>
@@ -117,13 +117,27 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-lg-3 col-md-6">
                         <div class="card-custom">
                             <div class="card-content">
                                 <i class="bi bi-geo-alt text-primary fs-1 mb-3"></i>
                                 <h3 class="h4 mb-2">Prep Kitchen</h3>
                                 <p class="small text-muted">981 Organic Meadows Ave</p>
                                 <p class="small text-muted">San Francisco, CA 94107</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card-custom">
+                            <div class="card-content">
+                                <i class="bi bi-share text-primary fs-1 mb-3"></i>
+                                <h3 class="h4 mb-2">Social Connect</h3>
+                                <div class="d-flex gap-2 justify-content-center mt-3">
+                                    <a href="https://facebook.com" class="social-icon-link" aria-label="Facebook Profile" target="_blank"><i class="bi bi-facebook fs-5"></i></a>
+                                    <a href="https://instagram.com" class="social-icon-link" aria-label="Instagram Profile" target="_blank"><i class="bi bi-instagram fs-5"></i></a>
+                                    <a href="https://twitter.com" class="social-icon-link" aria-label="Twitter Profile" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                                    <a href="https://youtube.com" class="social-icon-link" aria-label="YouTube Channel" target="_blank"><i class="bi bi-youtube fs-5"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -180,16 +194,10 @@
             </div>
         </section>
 
-        <!-- SECTION 4: Google Map Embed Placeholder -->
+        <!-- SECTION 4: Google Map Embed -->
         <section class="p-0 bg-white">
             <div class="w-100" style="height: 450px;">
-                <!-- Styled Map Frame Placeholder -->
-                <div class="w-100 h-100 bg-secondary-subtle d-flex flex-column align-items-center justify-content-center border-top">
-                    <i class="bi bi-map-fill text-primary fs-1 mb-2"></i>
-                    <h3 class="h4 text-secondary mb-1">Julian Thorne's Preparation Kitchen</h3>
-                    <p class="text-muted small">981 Organic Meadows Ave, San Francisco, CA 94107</p>
-                    <a href="https://maps.google.com" target="_blank" class="btn-custom btn-custom-outline mt-3">Open in Google Maps</a>
-                </div>
+                <iframe class="w-100 h-100 border-0 google-map-iframe" src="https://maps.google.com/maps?q=981%20Meadow%20Ave,%20San%20Francisco,%20CA%2094107&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
     </main>
@@ -273,3 +281,4 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
