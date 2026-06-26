@@ -70,10 +70,6 @@ html[dir="rtl"] .sidebar-menu-item.active a {
 }
 
 /* Fix brand logo SVG text layout in RTL mode */
-html[dir="rtl"] .logo-link,
-html[dir="rtl"] .logo-wrapper,
-html[dir="rtl"] .sidebar-brand,
-html[dir="rtl"] .footer-logo,
 html[dir="rtl"] .logo-link svg,
 html[dir="rtl"] .logo-wrapper svg,
 html[dir="rtl"] .sidebar-brand svg,
@@ -87,13 +83,50 @@ html[dir="rtl"] svg text {
     unicode-bidi: bidi-override !important;
 }
 
+/* Switch brand logo layout (paw to the right, text to the left) in RTL */
+html[dir="rtl"] .logo-link svg path,
+html[dir="rtl"] .logo-wrapper svg path,
+html[dir="rtl"] .sidebar-brand svg path,
+html[dir="rtl"] .footer-logo svg path {
+    transform: translate(110px, 0);
+}
+
+html[dir="rtl"] .logo-link svg text,
+html[dir="rtl"] .logo-wrapper svg text,
+html[dir="rtl"] .sidebar-brand svg text,
+html[dir="rtl"] .footer-logo svg text {
+    transform: translate(-37px, 0);
+}
+
+
+
+/* Footer RTL Overrides */
+html[dir="rtl"] footer {
+    text-align: right !important;
+}
+
+html[dir="rtl"] footer .footer-title::after {
+    left: auto !important;
+    right: 0 !important;
+}
+
+html[dir="rtl"] footer .logo-link,
+html[dir="rtl"] footer .footer-logo {
+    text-align: right !important;
+}
+
 /* Footer RTL Column Offsets Fix */
 @media (min-width: 992px) {
     html[dir="rtl"] footer .row > div {
         margin-right: 0 !important;
         margin-left: 0 !important;
     }
+    html[dir="rtl"] footer .offset-lg-1 {
+        margin-right: 8.33333333% !important;
+        margin-left: 0 !important;
+    }
 }
+
 
 
 
@@ -133,6 +166,12 @@ html[dir="rtl"] .offcanvas-header {
 html[dir="rtl"] .offcanvas-header .btn-close {
     margin: 0 !important;
 }
+
+/* Form Label RTL Overrides */
+html[dir="rtl"] .form-label {
+    text-align: right !important;
+}
+
 
 
 

@@ -182,6 +182,16 @@ section .section-header {
     transform: translateY(-2px);
 }
 
+.hero-general .btn-custom-outline {
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+}
+
+.hero-general .btn-custom-outline:hover {
+    background-color: #FFFFFF;
+    color: var(--color-secondary);
+}
+
 /* Header / Sticky Navigation */
 .sticky-header {
     position: fixed;
@@ -252,13 +262,14 @@ section .section-header {
     align-items: center !important;
     justify-content: flex-start !important; /* Fix Flexbox vertical center scroll cutoff bug */
     overflow-y: auto !important;
-    padding: 3rem 1.5rem !important;
+    padding: 1.5rem 1.5rem !important;
 }
 
 .mobile-nav-fullscreen .nav-link-custom {
-    font-size: clamp(1.2rem, 3.5vh, 1.8rem); /* Scale dynamically based on viewport height */
+    font-size: clamp(1.05rem, 2.2vh, 1.35rem); /* Scaled down for better fit */
     font-weight: var(--weight-h4-h6);
-    margin: 0.5rem 0; /* Reduced margin to optimize spacing */
+    margin: 0.15rem 0; /* Reduced margin */
+    padding: 0.25rem 0 !important; /* Reduced padding */
     display: block;
     text-align: center;
 }
@@ -981,6 +992,68 @@ body.dark-theme .newsletter-form .form-control:focus {
     border-left: 1px solid var(--border-color);
     padding-left: 1rem;
 }
+
+/* Form Label Alignment Fix */
+.form-label {
+    text-align: left;
+    display: block;
+    width: 100%;
+}
+
+/* Blog Page Category Filters 2x2 grid layout on mobile and tablet viewports (< 992px) */
+@media (max-width: 991.98px) {
+    #categoryFilters {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.5rem !important;
+        width: 100% !important;
+    }
+    #categoryFilters .btn {
+        width: 100% !important;
+        text-align: center !important;
+        margin: 0 !important;
+    }
+}
+
+/* Dashboard Page Layout Fixes for Mobile/Tablet Sticky Header */
+body.dashboard-page {
+    height: 100vh !important;
+    overflow: hidden !important;
+}
+
+@media (max-width: 1199.98px) {
+    body.dashboard-page {
+        height: 100vh !important;
+        overflow: hidden !important;
+    }
+    .dashboard-container {
+        height: 100vh !important;
+        overflow: hidden !important;
+    }
+    .dashboard-main {
+        height: 100vh !important;
+        overflow-y: auto !important;
+    }
+    .dashboard-header-bar {
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 990 !important;
+        background-color: var(--bg-body) !important;
+    }
+}
+
+/* Authentication Pages Mobile Layout Fix (Touch Prevention) */
+@media (max-width: 575.98px) {
+    .auth-page-body {
+        align-items: flex-start !important;
+        padding-top: 4.5rem !important;
+    }
+    .auth-toggles {
+        top: 10px !important;
+    }
+}
+
+
 
 
 

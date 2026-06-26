@@ -45,7 +45,7 @@ body.dark-theme .btn-custom-outline:hover {
 }
 
 body.dark-theme .card-custom {
-    background-color: var(--bg-card);
+    background-color: var(--bg-card) !important;
     border-color: var(--border-color);
 }
 
@@ -133,6 +133,11 @@ body.dark-theme .accordion-button::after {
     filter: invert(1);
 }
 
+body.dark-theme .accordion-body {
+    color: var(--text-secondary);
+}
+
+
 /* Modals */
 body.dark-theme .modal-content {
     background-color: var(--bg-card);
@@ -171,6 +176,11 @@ body.dark-theme .metric-info span {
 body.dark-theme .bg-white {
     background-color: var(--bg-card) !important;
 }
+
+body.dark-theme .bg-light {
+    background-color: var(--bg-body) !important;
+}
+
 
 body.dark-theme .text-muted {
     color: var(--text-secondary) !important;
@@ -267,7 +277,10 @@ body.dark-theme .bi-apple.text-dark {
 }
 
 /* Authentication Page Brand Name Visibility in Dark Theme */
-body.dark-theme .logo-wrapper svg text {
+body.dark-theme .logo-link svg text,
+body.dark-theme .logo-wrapper svg text,
+body.dark-theme .sidebar-brand svg text,
+body.dark-theme .footer-logo svg text {
     fill: #FFFFFF !important;
 }
 

@@ -14,18 +14,21 @@
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
 </head>
-<body>
+<body class="dashboard-page">
 
     <div class="dashboard-container">
         <!-- SECTION 1: Left Navigation Sidebar -->
         <aside class="dashboard-sidebar">
-            <div class="sidebar-brand">
+            <div class="sidebar-brand d-flex justify-content-between align-items-center">
                 <a href="index.html">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" width="160" height="45" style="vertical-align: middle;">
                         <path d="M25,12 C28,12 30,15 28,18 C26,21 24,21 22,18 C20,15 22,12 25,12 Z M37,18 C40,18 42,21 40,24 C38,27 36,27 34,24 C32,21 34,18 37,18 Z M13,18 C16,18 18,21 16,24 C14,27 12,27 10,24 C8,21 10,18 13,18 Z M25,24 C30,24 35,28 35,33 C35,39 30,42 25,42 C20,42 15,39 15,33 C15,28 20,24 25,24 Z" fill="#E65F2C" />
                         <text x="52" y="32" font-family="'Outfit', sans-serif" font-weight="600" font-size="20" fill="#FFFFFF">RawPaws</text>
                     </svg>
                 </a>
+                <button type="button" class="btn text-white border-0 p-1 d-xl-none" id="sidebarCloseBtn" aria-label="Close Sidebar">
+                    <i class="bi bi-x fs-2"></i>
+                </button>
             </div>
             
             <ul class="sidebar-menu mb-0">
@@ -63,25 +66,15 @@
             <!-- SECTION 2: Dashboard Header Bar -->
             <header class="dashboard-header-bar">
                 <div class="d-flex align-items-center gap-3">
-                    <button class="btn btn-outline-secondary d-lg-none" id="sidebarToggle" aria-label="Toggle Sidebar Menu">
+                    <button class="btn btn-outline-secondary d-xl-none" id="sidebarToggle" aria-label="Toggle Sidebar Menu">
                         <i class="bi bi-list fs-4"></i>
                     </button>
                     <h1 class="h3 mb-0 text-secondary">Admin Portal</h1>
                 </div>
                 
                 <div class="d-flex align-items-center gap-3">
-                    <button class="header-toggle-btn theme-toggle-btn" aria-label="Toggle theme"><i class="bi bi-moon-stars-fill" aria-hidden="true"></i></button>
-                    <button class="header-toggle-btn rtl-toggle-btn" aria-label="Toggle layout direction">RTL</button>
-                    
-                    <a href="404.html" class="position-relative text-secondary p-1">
-                        <i class="bi bi-bell fs-4"></i>
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:0.6rem;">3</span>
-                    </a>
-                    
-                    <div class="d-flex align-items-center gap-2 admin-profile-container">
-                        <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200" alt="Julian Thorne Profile" class="rounded-circle" style="width:40px; height:40px; object-fit:cover;">
-                        <span class="d-none d-md-inline small text-secondary fw-medium">Dr. Julian Thorne</span>
-                    </div>
+                    <button class="header-toggle-btn theme-toggle-btn d-none d-xl-inline-flex" aria-label="Toggle theme"><i class="bi bi-moon-stars-fill" aria-hidden="true"></i></button>
+                    <button class="header-toggle-btn rtl-toggle-btn d-none d-xl-inline-flex" aria-label="Toggle layout direction">RTL</button>
                 </div>
             </header>
 
@@ -130,18 +123,18 @@
 
                     <!-- Charts Grid -->
                     <div class="row g-4 mb-4">
-                        <div class="col-lg-8">
-                            <div class="p-4 border rounded bg-white" style="height:400px;">
+                        <div class="col-xl-8">
+                            <div class="p-4 border rounded bg-white" style="height:430px;">
                                 <h3 class="h5 mb-3 text-secondary">Subscription Growth Trend</h3>
-                                <div class="w-100 h-100" style="position:relative; height:320px;">
+                                <div class="w-100" style="position:relative; height:290px;">
                                     <canvas id="salesChart"></canvas>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4">
-                            <div class="p-4 border rounded bg-white" style="height:400px;">
+                        <div class="col-xl-4">
+                            <div class="p-4 border rounded bg-white" style="height:430px;">
                                 <h3 class="h5 mb-3 text-secondary">Popular Recipe Ratios</h3>
-                                <div class="w-100 h-100" style="position:relative; height:320px;">
+                                <div class="w-100" style="position:relative; height:290px;">
                                     <canvas id="recipeChart"></canvas>
                                 </div>
                             </div>
@@ -242,7 +235,7 @@
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="p-3 border rounded">
-                                    <div class="d-flex justify-content-between mb-2">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
                                         <h4 class="h6 mb-0 text-secondary">Marcus Vane</h4>
                                         <span class="small text-muted">2 hrs ago</span>
                                     </div>
@@ -252,7 +245,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="p-3 border rounded">
-                                    <div class="d-flex justify-content-between mb-2">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
                                         <h4 class="h6 mb-0 text-secondary">Emma Watson</h4>
                                         <span class="small text-muted">1 day ago</span>
                                     </div>

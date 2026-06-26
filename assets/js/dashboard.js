@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Sidebar Toggle for Mobile Viewports
     // ----------------------------------------------------
     const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebarCloseBtn = document.getElementById('sidebarCloseBtn');
     const dashboardSidebar = document.querySelector('.dashboard-sidebar');
     
     if (sidebarToggle && dashboardSidebar) {
@@ -15,11 +16,18 @@ document.addEventListener('DOMContentLoaded', () => {
             dashboardSidebar.classList.toggle('show-mobile-sidebar');
         });
         
+        if (sidebarCloseBtn) {
+            sidebarCloseBtn.addEventListener('click', () => {
+                dashboardSidebar.classList.remove('show-mobile-sidebar');
+            });
+        }
+        
         // Hide sidebar when clicking outside of it on mobile
         document.addEventListener('click', (e) => {
-            if (window.innerWidth < 992 && 
+            if (window.innerWidth < 1200 && 
                 !dashboardSidebar.contains(e.target) && 
-                e.target !== sidebarToggle) {
+                e.target !== sidebarToggle &&
+                (!sidebarCloseBtn || !sidebarCloseBtn.contains(e.target))) {
                 dashboardSidebar.classList.remove('show-mobile-sidebar');
             }
         });
@@ -28,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add mobile sidebar CSS toggle rules on the fly to avoid separate css classes conflicts
     const style = document.createElement('style');
     style.innerHTML = `
-        @media (max-width: 991.98px) {
+        @media (max-width: 1199.98px) {
             .dashboard-sidebar {
                 position: fixed;
                 top: 0;
@@ -88,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 // Hide sidebar on mobile after clicking
-                if (window.innerWidth < 992 && dashboardSidebar) {
+                if (window.innerWidth < 1200 && dashboardSidebar) {
                     dashboardSidebar.classList.remove('show-mobile-sidebar');
                 }
             });
@@ -119,6 +127,11 @@ document.addEventListener('DOMContentLoaded', () => {
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
+                layout: {
+                    padding: {
+                        bottom: 10
+                    }
+                },
                 plugins: {
                     legend: {
                         display: false
@@ -169,6 +182,11 @@ document.addEventListener('DOMContentLoaded', () => {
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
+                layout: {
+                    padding: {
+                        bottom: 15
+                    }
+                },
                 plugins: {
                     legend: {
                         position: 'bottom',
@@ -177,7 +195,8 @@ document.addEventListener('DOMContentLoaded', () => {
                                 family: 'Outfit',
                                 size: 12
                             },
-                            boxWidth: 12
+                            boxWidth: 12,
+                            padding: 15
                         }
                     }
                 }
