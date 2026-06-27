@@ -614,7 +614,7 @@ body.dark-theme .newsletter-form .form-control:focus {
 }
 
 .auth-toggles {
-    position: fixed;
+    position: absolute;
     top: 20px;
     right: 20px;
     display: flex;
@@ -1049,7 +1049,8 @@ body.dashboard-page {
         padding-top: 4.5rem !important;
     }
     .auth-toggles {
-        top: 10px !important;
+        position: absolute !important;
+        top: 15px !important;
     }
 }
 
